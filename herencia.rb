@@ -10,18 +10,6 @@ class Appointment
     @hour = hour
     @min = min
   end
-  def location()
-    @location
-  end
-  def purpose()
-    @purpose
-  end
-  def hour()
-    @hour
-  end
-  def min()
-    @min
-  end
 end 
 
 class MonthlyAppointment < Appointment
@@ -58,15 +46,6 @@ class OneTimeAppointment < Appointment
     @day = day
     @month = month
     @year = year
-  end
-  def day()
-    @day
-  end
-  def month()
-    @month
-  end
-  def year()
-    @year
   end
   def occurs_on?(day, month, year)
     @day == day && @month == month && @year == year
