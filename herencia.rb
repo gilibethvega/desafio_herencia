@@ -27,7 +27,7 @@ end
 class MonthlyAppointment < Appointment
   attr_accessor :day
   def initialize(location, purpose, hour, min, day)
-    raise ArgumentError, 'day is not an Integer' if min.class !=Integer
+    raise ArgumentError, 'day is not an Integer' if day.class !=Integer
     super(@location = location, @purpose = purpose, @hour = hour, @min = min)
     @day = day
   end
@@ -51,7 +51,7 @@ end
 class OneTimeAppointment < Appointment
   attr_accessor :day, :month, :year
   def initialize(location, purpose, hour, min, day, month, year)
-    raise ArgumentError, 'day is not an Integer' if min.class !=Integer
+    raise ArgumentError, 'day is not an Integer' if day.class !=Integer
     raise ArgumentError, 'month is not an Integer' if month.class !=Integer
     raise ArgumentError, 'year is not an Integer' if year.class !=Integer
     super(@location = location, @purpose = purpose, @hour = hour, @min = min)
